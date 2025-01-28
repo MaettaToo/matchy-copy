@@ -6,11 +6,29 @@
  *
  * See the README for detailed instructions,
  * and read every instruction carefully.
- */
+ *
 
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+/*I: empty object 
+//O: three object proprties added to empty object printed to the console
+//C:
+//E:
+// initialize variable assigned to empty object
+*/
+var animal = {};
+
+//use dot notation add property species and value 
+animal.species = 'cat';
+//use bracket notation to add property name and value
+animal['name'] = 'Olivia';
+//use bracket notation to add property noises as an empty array
+animal['noises'] = [],
+// print to console object
+console.log(animal)
+
+
 
 
 
@@ -18,8 +36,24 @@
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+// goal is to create an array with for items, using bracket notation,push,shift and bracket notation to add to the array
+// 2nd goal is to console log length of noises, console log last value, console log the entire array
+// initialize var noises as an empty array
+var noises = [];
+// use bracket noatation to add the first element of array
+noises[0] = 'purr';
+//use push to add second element of array
+noises.push('meow');
+//use shift to add third element of array
+noises.shift('chirp');
+//use bracket notation for fourth element
+noises[3] = 'growl';
+//console log length of array
+console.log(noises.length);
+//console log last element of array without hard coding
+console.log(noises.length-1);
+// console log entire array
+console.log(noises);
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
