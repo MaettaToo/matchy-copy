@@ -45,13 +45,13 @@ noises[0] = 'purr';
 //use push to add second element of array
 noises.push('meow');
 //use shift to add third element of array
-noises.shift('chirp');
+noises.unshift('chirp');
 //use bracket notation for fourth element
-noises[3] = 'growl';
+noises[noises.length] = 'growl';
 //console log length of array
 console.log(noises.length);
 //console log last element of array without hard coding
-console.log(noises.length-1);
+console.log(noises[noises.length-1]);
 // console log entire array
 console.log(noises);
 
@@ -60,13 +60,29 @@ console.log(noises);
 //////////////////////////////////////////////////////////////////////
 
 
+// use bracket notation to assign noises array to the noises property of animal object
+animal['noises'] = noises;
+// use  push to  add another noise to the `noises` property on `animal`.
+animal['noises'].push('yowl');
+//console.log animal
+console.log(animal);
+ 
+
 
 /* *******************************************************************
  * Step 4 - Review
  *
- * 1. What are the different ways you can access properties on objects?
+ * 1. What are the different  ways you can access properties on objects?
+ * // You can  access the properties of objects by using bracket notation or dot notation.
+ * // If you have the property name then do notation would be best.In the object.propertyName syntax, 
+ * the propertyName must be a valid JavaScript identifier which can also be a reserved word
+ * //If you do not have the property name bracket notation would be best.
+ * In the object[expression] syntax, the expression should evaluate to a string or Symbol
+ *  that represents the property's name. So, it can be any string literal, for example, 
+ * including '1foo', '!bar!', or even ' ' (a space).
  *
  * 2. What are the different ways of accessing elements on arrays?
+ * //
  *
  * *******************************************************************
  */
@@ -83,6 +99,43 @@ console.log(noises);
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//Create a variable named `animals` and assign it to an empty array.
+var animals = [];
+ //push animal object to the  `animals` array.
+ animals.push(animal); 
+ //console.log` `animals`.
+ console.log(animals);
+ //create a variable called `duck` and assign it to the data:
+//{ species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] }`
+var duck = {
+  species: 'duck',
+  name: 'Jerome',
+  noises: ['quack' , 'honk' , 'sneeze' , 'woosh']
+};
+ //push var duck to animals object
+ animals.push(duck);
+ //console.log` `animals
+ console.log(animals);
+ //Create two more animal objects each with a species, a name, and at least two sounds sounds add each one of them to `animals.
+ var dog ={
+species: 'dog',
+name: 'Bambi',
+noises: ['bark', 'howl', 'snuffle']
+ };
+
+ var bird = {
+ species: 'budgy',
+  name: 'Charlotte',
+ noises: ['chirp','human voice', 'song']
+ };
+ animals.push(dog);
+ animals.push(bird);
+
+ //console.log animals`, and
+console.log(animals);
+ //console.log the length of animals
+ console.log(animals.length);
+ 
 
 
 
