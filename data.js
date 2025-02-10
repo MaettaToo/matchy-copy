@@ -74,15 +74,15 @@ console.log(animal);
  *
  * 1. What are the different  ways you can access properties on objects?
  * // You can  access the properties of objects by using bracket notation or dot notation.
- * // If you have the property name then do notation would be best.In the object.propertyName syntax, 
+ * // If you have the property name then dot notation would be best.In the object.propertyName syntax, 
  * the propertyName must be a valid JavaScript identifier which can also be a reserved word
  * //If you do not have the property name bracket notation would be best.
  * In the object[expression] syntax, the expression should evaluate to a string or Symbol
- *  that represents the property's name. So, it can be any string literal, for example, 
- * including '1foo', '!bar!', or even ' ' (a space).
+ *  that represents the property's name. When you use the bracket notation with an object it returns the value of the property
+ * 
  *
  * 2. What are the different ways of accessing elements on arrays?
- * //
+ * //Bracket notation is the only way. You can use methods to change an array and also bracket notation.
  *
  * *******************************************************************
  */
@@ -142,7 +142,34 @@ console.log(animals);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//I: function with one param represented as an array
+//O: a list of friends attached to one of the animals in the animals array
+//C:
+//E:
+// create object to hold a list of friends. I chose object because of it's versatility in holding data
+//init var friends assign to object, I changed it because it failed the test 
+var friends = [];
 
+//init for loop to access the values of the name propert and push into friends array
+
+// init function getRandom with one param that takes the animals array
+ 
+function getRandom(array){
+  // return a random index number using Math.Random, array length and Math.floor to return whole number
+  return Math.floor(Math.random() * array.length);  
+}
+// init var index signed to the getRandom function.
+var index = getRandom(animals);
+// test to see if function and variable assignment worked 
+console.log(index)
+//pushed animals at the index name into friends array 
+friends.push(animals[index].name);
+// console log friends
+console.log(friends);
+//Use **bracket notation**, add friends as property to one of the animals on the arry
+animals[index]['friends'] = friends;
+// console log animals
+console.log(animals);
 
 
 /**

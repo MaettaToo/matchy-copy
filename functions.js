@@ -12,7 +12,23 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+//I: function with two param represented as array and string
+//O:  object or null dependent on which case is true
+//C:
+//E:
+// init function search with two param
+function search (array, string){
+    // init for loop to iterate over array , conditions zero index, arrray length, increment by 1
+    for (var i = 0; i < array.length; i++){
+        // init conditional statements to determine if animal that name exists
+        if (array[i]['name'] === string){
+            return array[i];
+        }
+        else{
+            return null;
+        }
+    }
+}
 
 
 //////////////////////////////////////////////////////////////////////
