@@ -128,14 +128,13 @@ function add (animals, animal){
         // initiate for loop to iterate over  animals array
         for (var i = 0; i < animals.length; i++){
                 // check name values in array against name in object
-                if(animals[i]['name'] !== animal['name']){
+                if(animals[i]['name'] === animal['name']){
                 return true;
-            }
-            
+            } 
             }
         return false
     } 
-    if( lengthTest === true && uniqueName === true){
+    if( lengthTest() === true && uniqueName() === false){
         animals.push(animal);
     }
     return animals;
